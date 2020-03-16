@@ -1,5 +1,5 @@
 <?php
-$con = mysql_connect("example","example","");
+$con = mysql_connect('localhost','root','Qw3rty54e21');
 if ( ! $con) {
     die('Could not connect: ' . mysql_error());
 }
