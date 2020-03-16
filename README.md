@@ -1,1 +1,1 @@
-# humidibot.github.io
+# humidibot
