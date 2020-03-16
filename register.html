@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register</title>
+
+    <script>
+    function validateForm() {
+        var x = document.forms["register"]["email"].value;
+        var y = document.forms["register"]["password"].value;
+        var z = document.forms["register"]["confirmpass"].value;
+        if ((x == "") || (y == "") || (z == "")) {
+            alert("One or more fields are empty.");
+            return false;
+        } else if (y != z) {
+            alert("Passwords not the same.");
+            return false;
+        } else {
+            return true;
+        }
+    }
+    </script>
+</head>
+
+<body>
+  <div class="registermain">
+    <img src="imgs/Humidibot.png" class="logo" alt="Humidibot logo">
+    <a class="name" href="index.html" align="center">Humidibot</a>
+    <p class="sign" align="center">Enter below</p>
+    <form name="register" onsubmit="return validateForm()" action="php/register.php" method="POST" class="form1">
+      <input class="email" type="text" name="email" align="center" placeholder="Email">
+      <input class="pass" type="password" name="password" align="center" placeholder="Password">
+      <input class="pass" type="password" name="confirmpass" align="center" placeholder="Confirm Password">
+      <input class="register" value="Register" align="center" type="submit">  
+        </form>   
+                
+    </div>
+     
+</body>
+
+</html>
